@@ -55,6 +55,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="D">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWw-f9-qa3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -77,6 +80,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="E">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPj-GX-nhX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -99,6 +105,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="F">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vjy-5o-rjr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -121,6 +130,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="G">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNF-qv-Uws"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -143,6 +155,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="A">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t4q-Eo-Fsz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -165,6 +180,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="B">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="50"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="keyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0y-M4-Wvd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
