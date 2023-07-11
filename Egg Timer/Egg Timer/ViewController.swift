@@ -15,22 +15,27 @@ class ViewController: UIViewController {
     let mediumTime = 7
     let hardTime = 12
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let eggTimes = ["Soft": 300 ,"Medium": 420, "Hard": 720]
+    
+    var secondsRemaining = 60
+    
+    @IBAction func selectedButton(_ sender: UIButton) {
         
+        let hardness = sender.currentTitle ?? ""
+
+        secondsRemaining = eggTimes[hardness] ?? 0
+    
+        
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
+    @objc func updateTimer() {
+        if secondsRemaining > 0 {
+            print("\(secondsRemaining) seconds")
+            secondsRemaining -= 1
+        }
+    }
+    
 
    
-    @IBAction func softSelected(_ sender: UIButton) {
-        print(softTime)
-    }
-    
-    @IBAction func mediumSelected(_ sender: UIButton) {
-        print(mediumTime)
-    }
-    
-    @IBAction func hardSelected(_ sender: Any) {
-        print(hardTime)
-    }
     
 }
