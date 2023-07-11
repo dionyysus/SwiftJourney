@@ -15,10 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ky4-vG-h4s">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ky4-vG-h4s" userLabel="Vertical Stack View">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fea-8v-xb5">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fea-8v-xb5" userLabel="Title View">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="247.66666666666666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdY-Vt-QJT">
@@ -35,7 +35,7 @@
                                             <constraint firstAttribute="bottom" secondItem="gdY-Vt-QJT" secondAttribute="bottom" id="uLG-c3-t64"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9OR-54-EFa">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9OR-54-EFa" userLabel="Egg Stack View">
                                         <rect key="frame" x="0.0" y="255.66666666666669" width="393" height="247.66666666666669"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-RJ-L9a" userLabel="Soft Egg View">
@@ -48,6 +48,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="123" height="247.66666666666666"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="softSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1CS-6S-B4R"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -68,9 +71,12 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="123" height="247.66666666666666"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpZ-xV-4UT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="247.66666666666666"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="247.66666666666666"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="mediumSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s42-tY-hjC"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -79,6 +85,7 @@
                                                     <constraint firstItem="Equ-S4-kCr" firstAttribute="leading" secondItem="833-9f-mv1" secondAttribute="leading" id="I8M-UZ-Q5S"/>
                                                     <constraint firstAttribute="bottom" secondItem="Equ-S4-kCr" secondAttribute="bottom" id="SaO-6b-6Oo"/>
                                                     <constraint firstItem="xpZ-xV-4UT" firstAttribute="top" secondItem="833-9f-mv1" secondAttribute="top" id="dRF-Cb-POf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xpZ-xV-4UT" secondAttribute="trailing" id="jP3-Eg-TQF"/>
                                                     <constraint firstAttribute="bottom" secondItem="xpZ-xV-4UT" secondAttribute="bottom" id="sa5-Av-jaJ"/>
                                                     <constraint firstItem="xpZ-xV-4UT" firstAttribute="leading" secondItem="833-9f-mv1" secondAttribute="leading" id="vBs-Ik-Szm"/>
                                                 </constraints>
@@ -93,6 +100,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="123" height="247.66666666666666"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="hardSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GgM-Mk-Gix"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -109,7 +119,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMZ-Kv-p0u" userLabel="Timer View">
-                                        <rect key="frame" x="0.0" y="511.33333333333343" width="393" height="247.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="511.33333333333343" width="393" height="247.66666666666657"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -123,6 +133,9 @@
                             <constraint firstItem="Ky4-vG-h4s" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MfV-Ct-bvR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="gdY-Vt-QJT" id="VwF-Au-Sca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
