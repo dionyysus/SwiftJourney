@@ -21,8 +21,6 @@ class ViewController: UIViewController {
         
         let hardness = sender.currentTitle ?? ""
         totalTime = eggTimes[hardness] ?? 0
-      
-        
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     @objc func updateTimer() {
