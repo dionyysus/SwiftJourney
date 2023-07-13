@@ -27,9 +27,9 @@ class ViewController: UIViewController {
     }
     @objc func updateTimer() {
         if secondsPassed < totalTime {
-            let percentageProgress = secondsPassed / totalTime
-            barProgressView.progress = Float(percentageProgress)
             secondsPassed += 1
+            let percentageProgress = Float(secondsPassed) / Float(totalTime)
+            barProgressView.progress = Float(percentageProgress)
         }else{
             timer.invalidate()
             titleLabel.text = "Done!"
