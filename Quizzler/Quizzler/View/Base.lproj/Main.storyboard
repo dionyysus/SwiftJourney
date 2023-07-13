@@ -24,8 +24,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-IX-9S8">
                                 <rect key="frame" x="0.0" y="59" width="393" height="657"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c61-J6-4Xy">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="56.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56.670000000000002" id="Htq-mT-XFo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJG-YM-YE5">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="455"/>
+                                        <rect key="frame" x="0.0" y="66.666666666666657" width="393" height="388.33333333333337"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -56,7 +65,7 @@
                                             <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7b-Gf-NEP"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k82-mV-Fbk">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k82-mV-Fbk">
                                         <rect key="frame" x="0.0" y="647" width="393" height="10"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="hyp-3E-ig2"/>
@@ -81,8 +90,9 @@
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="meZ-7D-Vz4" id="Knl-qh-h65"/>
-                        <outlet property="progressBar" destination="IHA-IX-9S8" id="Fk6-c8-lfP"/>
+                        <outlet property="progressBar" destination="k82-mV-Fbk" id="AV4-e6-slO"/>
                         <outlet property="questionLabel" destination="eJG-YM-YE5" id="K1g-iJ-Xmj"/>
+                        <outlet property="scoreLabel" destination="c61-J6-4Xy" id="YS7-Es-WIq"/>
                         <outlet property="trueButton" destination="hMj-oZ-nYb" id="cPz-cK-s5B"/>
                     </connections>
                 </viewController>

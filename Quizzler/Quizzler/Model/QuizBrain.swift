@@ -1,19 +1,16 @@
 //
-//  ViewController.swift
+//  QuizBrain.swift
 //  Quizzler
 //
 //  Created by Gizem Coşkun on 13.07.2023.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
 
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var progressBar: UIStackView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    
+struct QuizBrain {
+    var questionNumber = 0
+    var score = 0
     let quiz = [
         Question(q: "A slug's blood is green.", a: "True"),
                 Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
@@ -30,37 +27,32 @@ class ViewController: UIViewController {
 
     ]
     
-    var questionNumber = 0
-    var i = 0
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateUI()
-    }
-
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
-    
-        let userAnswer = sender.currentTitle //True, False
-        let questionAnswer = quiz[questionNumber].answer
-       
-        if userAnswer == questionAnswer {
-            sender.backgroundColor = UIColor.green
+    mutating func checkAnswer(_ userAnswer: String) -> Bool{
+        if userAnswer == quiz[questionNumber].answer {
+            score += 1
+           return true
         }else{
-            sender.backgroundColor = UIColor.red
+            return false
         }
-        
+    }
+    
+    func getQuestionText() -> String{
+        return quiz[questionNumber].text
+    }
+    func getProgress() -> Float{
+        let progress = Float(questionNumber) / Float(quiz.count)
+        return progress
+    }
+    mutating func nextQuestion(){
         if questionNumber + 1 < quiz.count {
             questionNumber += 1
         }else{
             questionNumber = 0
+            score = 0
         }
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: true)
     }
-   
-    @objc func updateUI(){
-        questionLabel.text = quiz[questionNumber].text
-        trueButton.backgroundColor = UIColor.clear
-        falseButton.backgroundColor = UIColor.clear
+    func getScore() -> Int{
+        return score
     }
-    
 }
 
