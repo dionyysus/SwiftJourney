@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-IX-9S8">
                                 <rect key="frame" x="0.0" y="59" width="393" height="657"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJG-YM-YE5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJG-YM-YE5">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="455"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,24 +35,26 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="81" id="404-xF-fze"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="True">
-                                            <backgroundConfiguration key="background" cornerRadius="0.0" image="Rectangle"/>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="True" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxK-gu-7dZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meZ-7D-Vz4">
                                         <rect key="frame" x="0.0" y="556" width="393" height="81"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="81" id="Asj-pa-WjI"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="False">
-                                            <backgroundConfiguration key="background" cornerRadius="0.0" image="Rectangle"/>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="False" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7b-Gf-NEP"/>
+                                        </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k82-mV-Fbk">
                                         <rect key="frame" x="0.0" y="647" width="393" height="10"/>
@@ -77,6 +79,12 @@
                             <constraint firstItem="NXq-2U-e6f" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="z15-sG-dAn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="meZ-7D-Vz4" id="Knl-qh-h65"/>
+                        <outlet property="progressBar" destination="IHA-IX-9S8" id="Fk6-c8-lfP"/>
+                        <outlet property="questionLabel" destination="eJG-YM-YE5" id="K1g-iJ-Xmj"/>
+                        <outlet property="trueButton" destination="hMj-oZ-nYb" id="cPz-cK-s5B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
