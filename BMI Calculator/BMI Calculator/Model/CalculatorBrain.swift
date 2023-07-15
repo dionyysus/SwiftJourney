@@ -6,18 +6,34 @@
 //
 
 import Foundation
+import UIKit
 
 struct CalculatorBrain {
 
-    var bmi: Float = 0.0
-    
-    func getBMIValue() -> String {
-        let bmiTo1DecimalPlace = String(format: "%.1f", bmi)
-        return bmiTo1DecimalPlace
+    var bmi: BMI?
+      
+      func getBMIValue() -> String {
+          let bmiTo1DecimalPlace = String(format: "%.1f", bmi?.value ?? 0.0)
+          return bmiTo1DecimalPlace
+      }
+      
+    func getAdvice() -> String{
+        return bmi?.advice ?? "No Advice"
     }
     
-    mutating func calculateBMI(height: Float, weight: Float) {
-        bmi = weight / (height * height)
+    func getColor() -> UIColor{
+        return bmi?.color ?? UIColor.white
     }
+      mutating func calculateBMI(height: Float, weight: Float) {
+          let bmiValue = weight / (height * height)
+    
+          if bmiValue < 18.5 {
+              bmi = BMI(value: bmiValue, advice: "eat more piece!", color: .blue)
+          } else if 18.5 <= bmiValue && bmiValue <= 24.9 {
+              bmi = BMI(value: bmiValue, advice: "fit as a friddle!", color: .green)
+          } else {
+              bmi = BMI(value: bmiValue, advice: "eat less piece!", color: .systemPink)
+          }      }
+    
 }
 
