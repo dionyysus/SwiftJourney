@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func choiceMade(_ sender: UIButton) {
-
+    
         let userChoice = sender.currentTitle ?? ""
         let selectedChoise = storyBrain.nextStory(userChoice)
         storyLabel.text = storyBrain.stories[storyBrain.storyNumber].title
