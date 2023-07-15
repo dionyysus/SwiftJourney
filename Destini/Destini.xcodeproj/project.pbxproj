@@ -60,9 +60,9 @@
 		0AA13CEA2A6265B80068AE15 /* Destini */ = {
 			isa = PBXGroup;
 			children = (
-				0AA13D012A6265CC0068AE15 /* Controller */,
 				0AA13D002A6265C70068AE15 /* View */,
 				0AA13CFF2A6265C20068AE15 /* Model */,
+				0AA13D012A6265CC0068AE15 /* Controller */,
 				0AA13CEB2A6265B80068AE15 /* AppDelegate.swift */,
 				0AA13CED2A6265B80068AE15 /* SceneDelegate.swift */,
 				0AA13CF42A6265B90068AE15 /* Assets.xcassets */,
