@@ -48,24 +48,27 @@
                                             <constraint firstAttribute="height" constant="20.329999999999998" id="G6T-2H-WQt"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kpe-pz-ljN">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Kpe-pz-ljN">
                                         <rect key="frame" x="-2" y="507.66666666666663" width="365" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="jcT-vC-dsn"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.63529413940000001" green="0.63137257099999999" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="tgl-mr-OwI"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="264" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-Wo-rDk">
                                         <rect key="frame" x="0.0" y="587.66666666666663" width="361" height="20.333333333333371"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0i-3T-pN3">
-                                                <rect key="frame" x="0.0" y="0.0" width="46" height="20.333333333333332"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0i-3T-pN3">
+                                                <rect key="frame" x="0.0" y="0.0" width="38.333333333333336" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="100 kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-Pd-dOT">
-                                                <rect key="frame" x="310" y="0.0" width="51" height="20.333333333333332"/>
+                                                <rect key="frame" x="302.33333333333331" y="0.0" width="58.666666666666686" height="20.333333333333332"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20.329999999999998" id="D1M-ae-oed"/>
                                                 </constraints>
@@ -75,12 +78,15 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WqY-HF-EZo">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="WqY-HF-EZo">
                                         <rect key="frame" x="-2" y="628" width="365" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="W3C-51-nbM"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.63529413940000001" green="0.63137257099999999" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6cY-CJ-1Na"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szI-hd-Woh">
                                         <rect key="frame" x="0.0" y="708" width="361" height="51"/>
@@ -110,6 +116,10 @@
                             <constraint firstItem="LOA-3M-aaD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v43-ex-1r5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="iLJ-SE-jFH" id="Mav-sz-CXY"/>
+                        <outlet property="weightLabel" destination="Gag-Pd-dOT" id="6yu-jO-66z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
