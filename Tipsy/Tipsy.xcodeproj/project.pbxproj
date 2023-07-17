@@ -14,6 +14,8 @@
 		0A7F6AA72A6513E800F6CE6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F6AA62A6513E800F6CE6E /* Assets.xcassets */; };
 		0A7F6AAA2A6513E800F6CE6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7F6AA82A6513E800F6CE6E /* LaunchScreen.storyboard */; };
 		0AA37C462A6572E200540135 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA37C452A6572E200540135 /* ResultsViewController.swift */; };
+		0AF4E7CC2A6592BA008E1A08 /* BillBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4E7CB2A6592BA008E1A08 /* BillBrain.swift */; };
+		0AF4E7D02A6592E5008E1A08 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF4E7CF2A6592E5008E1A08 /* Bill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0A7F6AA92A6513E800F6CE6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A7F6AAB2A6513E800F6CE6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AA37C452A6572E200540135 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		0AF4E7CB2A6592BA008E1A08 /* BillBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillBrain.swift; sourceTree = "<group>"; };
+		0AF4E7CF2A6592E5008E1A08 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		0AA37C442A6572A600540135 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0AF4E7CB2A6592BA008E1A08 /* BillBrain.swift */,
+				0AF4E7CF2A6592E5008E1A08 /* Bill.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 				0A7F6AA22A6513E700F6CE6E /* CalculatorViewController.swift in Sources */,
 				0A7F6A9E2A6513E700F6CE6E /* AppDelegate.swift in Sources */,
 				0A7F6AA02A6513E700F6CE6E /* SceneDelegate.swift in Sources */,
+				0AF4E7CC2A6592BA008E1A08 /* BillBrain.swift in Sources */,
+				0AF4E7D02A6592E5008E1A08 /* Bill.swift in Sources */,
 				0AA37C462A6572E200540135 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

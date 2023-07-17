@@ -18,21 +18,20 @@ class CalculatorViewController: UIViewController {
     
     var tip = 0.10
     var splitNumber = 0
+    var billBrain = BillBrain()
     
     @IBAction func tipChanged(_ sender: UIButton) {
+        let buttonTitle = sender.currentTitle ?? ""
         zeroPctButton.isSelected = false
         tenPctButton.isSelected = false
         twentyPctButton.isSelected = false
         sender.isSelected = true
-        billTextField.endEditing(true)
-        let buttonTitle = sender.currentTitle ?? ""
         let buttonTitleMinusPercentSign =  String(buttonTitle.dropLast())
         let buttonTitleAsANumber = Double(buttonTitleMinusPercentSign) ?? 0.0
         tip = buttonTitleAsANumber / 100
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        
         if Int(sender.value) > splitNumber {
             splitNumber += 1
         }else {
@@ -42,11 +41,18 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-//        var bill = billTextField.text ?? ""
-//        var lastBill = ((Double(bill) ?? 0.0) + tip)
-//        lastBill = lastBill / Double(splitNumber)
-//        print(lastBill)
+        let bill = billTextField.text ?? ""
+        let splitNumber = splitNumberLabel.text ?? ""
+        billBrain.calculateBill(bill: bill, splitNumber: splitNumber, tip: tip)
         self.performSegue(withIdentifier: "goToResult", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult"{
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.totalBill = billBrain.getBill()
+            destinationVC.settings = billBrain.getSettings()
+        }
     }
 }
 
