@@ -18,19 +18,16 @@ class CalculatorViewController: UIViewController {
     
     var tip = 0.10
     var splitNumber = 0
+    
     @IBAction func tipChanged(_ sender: UIButton) {
         zeroPctButton.isSelected = false
         tenPctButton.isSelected = false
         twentyPctButton.isSelected = false
-        
         sender.isSelected = true
-        
-        let buttonTitle = sender.currentTitle!
-                
+        billTextField.endEditing(true)
+        let buttonTitle = sender.currentTitle ?? ""
         let buttonTitleMinusPercentSign =  String(buttonTitle.dropLast())
-        
         let buttonTitleAsANumber = Double(buttonTitleMinusPercentSign) ?? 0.0
-        
         tip = buttonTitleAsANumber / 100
     }
     
@@ -45,7 +42,10 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        print(splitNumber)
+        var bill = billTextField.text ?? ""
+        var lastBill = ((Double(bill) ?? 0.0) + tip)
+        lastBill = lastBill / Double(splitNumber)
+        print(lastBill)
     }
 }
 
