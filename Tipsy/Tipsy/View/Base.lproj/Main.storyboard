@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="HoM-Yj-OgP">
             <objects>
-                <viewController id="Sgn-Li-TgV" sceneMemberID="viewController">
+                <viewController id="Sgn-Li-TgV" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zKo-DC-1qi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,6 +262,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Recalculate">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="Sgn-Li-TgV" eventType="touchUpInside" id="og5-3T-5MR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YRE-Tg-RF9"/>
@@ -277,6 +280,10 @@
                             <constraint firstItem="YRE-Tg-RF9" firstAttribute="trailing" secondItem="7Ju-Sj-oPX" secondAttribute="trailing" constant="50" id="ydT-L8-Xb2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="7Ju-Sj-oPX" id="sjO-XZ-1UN"/>
+                        <outlet property="totalLabel" destination="npX-Oa-WkL" id="Sqk-9g-jDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzl-5J-iQM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
