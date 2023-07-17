@@ -32,33 +32,32 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="sLp-gp-SLA">
-                                                <rect key="frame" x="34.666666666666657" y="43.999999999999972" width="284" height="54"/>
+                                                <rect key="frame" x="53.666666666666686" y="43.999999999999972" width="246" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXG-Z4-LUD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="74.333333333333329" height="54"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="2GI-lp-NaH"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="xtG-u7-LkE"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="35"/>
                                                         <color key="tintColor" red="0.090498350560665131" green="0.71177530288696289" blue="0.11538530141115189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="%0">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                                        </buttonConfiguration>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="0%"/>
                                                         <connections>
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUT-FB-x49"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8h-Tm-tI2">
-                                                        <rect key="frame" x="98.333333333333343" y="0.0" width="67" height="54"/>
+                                                        <rect key="frame" x="83.999999999999986" y="0.0" width="67.000000000000014" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="3zp-CN-Brb"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="5Be-q9-Xyi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                        <color key="tintColor" red="0.090498350560665131" green="0.71177530288696289" blue="0.11538530141115189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" red="0.089380629360675812" green="0.72357511520385742" blue="0.083302922546863556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="%10">
+                                                        <state key="normal" title="10%">
                                                             <color key="titleColor" red="0.089380629360675812" green="0.72357511520385742" blue="0.083302922546863556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -66,16 +65,15 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHq-Hh-WYB">
-                                                        <rect key="frame" x="189.33333333333334" y="0.0" width="94.666666666666657" height="54"/>
+                                                        <rect key="frame" x="175" y="0.0" width="71" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="mij-Zt-8Df"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="pPq-np-2Sr"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <color key="tintColor" red="0.089380629360675812" green="0.72357511520385742" blue="0.083302922546863556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="%20">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
-                                                        </buttonConfiguration>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="20%"/>
                                                         <connections>
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQY-Hq-kZ8"/>
                                                         </connections>
@@ -169,6 +167,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Calculate">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayo-lf-IAz"/>
                                 </connections>
@@ -251,8 +252,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZZ-U0-HYM">
-                                <rect key="frame" x="89" y="764" width="215" height="54"/>
-                                <color key="backgroundColor" red="0.16155186295509338" green="0.74555748701095581" blue="0.08309105783700943" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="96.666666666666686" y="764" width="200" height="54"/>
+                                <color key="backgroundColor" red="0.089380629360675812" green="0.72357511520385742" blue="0.083302922546863556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ci6-to-7wa"/>
                                     <constraint firstAttribute="height" constant="54" id="f3c-Zv-Yph"/>
@@ -260,8 +261,11 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Recalculate">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="recalculatePressed:" destination="Sgn-Li-TgV" eventType="touchUpInside" id="og5-3T-5MR"/>
                                 </connections>
