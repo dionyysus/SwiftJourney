@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="%0">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUT-FB-x49"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8h-Tm-tI2">
                                                         <rect key="frame" x="98.333333333333343" y="0.0" width="67" height="54"/>
@@ -58,6 +61,9 @@
                                                         <state key="normal" title="%10">
                                                             <color key="titleColor" red="0.089380629360675812" green="0.72357511520385742" blue="0.083302922546863556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WJT-gs-IyB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHq-Hh-WYB">
                                                         <rect key="frame" x="189.33333333333334" y="0.0" width="94.666666666666657" height="54"/>
@@ -70,6 +76,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="%20">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VQY-Hq-kZ8"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -101,6 +110,9 @@
                                                             <constraint firstAttribute="width" constant="94" id="db2-Md-sMZ"/>
                                                             <constraint firstAttribute="height" constant="29" id="ino-F1-OSG"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hDt-cf-icZ"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                             </stackView>
@@ -157,6 +169,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Calculate">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayo-lf-IAz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -173,6 +188,13 @@
                             <constraint firstItem="fRg-Zi-y4w" firstAttribute="top" secondItem="iPK-mA-Msf" secondAttribute="bottom" constant="40" id="lYu-Ie-VmQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="jFS-ec-aVV" id="FcZ-Wy-8Yr"/>
+                        <outlet property="splitNumberLabel" destination="kuT-Vo-u19" id="niu-B7-cti"/>
+                        <outlet property="tenPctButton" destination="I8h-Tm-tI2" id="fLn-me-BAH"/>
+                        <outlet property="twentyPctButton" destination="CHq-Hh-WYB" id="4p5-Du-WR2"/>
+                        <outlet property="zeroPctButton" destination="xXG-Z4-LUD" id="sgO-Jc-4y5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
