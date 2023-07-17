@@ -42,10 +42,11 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        var bill = billTextField.text ?? ""
-        var lastBill = ((Double(bill) ?? 0.0) + tip)
-        lastBill = lastBill / Double(splitNumber)
-        print(lastBill)
+//        var bill = billTextField.text ?? ""
+//        var lastBill = ((Double(bill) ?? 0.0) + tip)
+//        lastBill = lastBill / Double(splitNumber)
+//        print(lastBill)
+        self.performSegue(withIdentifier: "goToResult", sender: self)
     }
 }
 

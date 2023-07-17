@@ -195,6 +195,7 @@
                         <outlet property="tenPctButton" destination="I8h-Tm-tI2" id="fLn-me-BAH"/>
                         <outlet property="twentyPctButton" destination="CHq-Hh-WYB" id="4p5-Du-WR2"/>
                         <outlet property="zeroPctButton" destination="xXG-Z4-LUD" id="sgO-Jc-4y5"/>
+                        <segue destination="Sgn-Li-TgV" kind="presentation" identifier="goToResult" id="4UW-tR-qJl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -206,7 +207,7 @@
             <objects>
                 <viewController id="Sgn-Li-TgV" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zKo-DC-1qi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nT-ZV-qwE">
@@ -252,7 +253,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZZ-U0-HYM">
-                                <rect key="frame" x="96.666666666666686" y="764" width="200" height="54"/>
+                                <rect key="frame" x="96.666666666666686" y="788" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.089380629360675812" green="0.72357511520385742" blue="0.083302922546863556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ci6-to-7wa"/>
