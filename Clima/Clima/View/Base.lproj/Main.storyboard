@@ -55,6 +55,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="magnifyingglass" catalog="system"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXg-tj-1Jd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -121,6 +124,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="HiB-SB-cZ3" id="tkL-hG-ZuR"/>
                         <outlet property="conditionImageView" destination="38K-Ia-yWY" id="D0x-h8-N3t"/>
+                        <outlet property="searchTextField" destination="H5f-sg-rDQ" id="jHV-Ev-Ydv"/>
                         <outlet property="temperatureLabel" destination="tly-d2-Ogd" id="g3x-G8-8gd"/>
                     </connections>
                 </viewController>
