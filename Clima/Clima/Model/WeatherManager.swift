@@ -37,6 +37,7 @@ struct WeatherManager{
         do{
             let decodeData = try decoder.decode(WeatherData.self, from: weatherData)
             print(decodeData)
+            //print(decodeData.weather[0].description)
         } catch {
             print(error)
         }
