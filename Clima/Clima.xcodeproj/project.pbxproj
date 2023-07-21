@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A863EC02A6AD270007189E2 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A863EBF2A6AD270007189E2 /* WeatherData.swift */; };
 		0A95B34A2A6859170072210B /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A95B3492A6859170072210B /* WeatherManager.swift */; };
 		0AFB817C2A66CA6300B571A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB817B2A66CA6300B571A1 /* AppDelegate.swift */; };
 		0AFB817E2A66CA6300B571A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFB817D2A66CA6300B571A1 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A863EBF2A6AD270007189E2 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		0A95B3492A6859170072210B /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		0AFB81782A66CA6300B571A1 /* Clima.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clima.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFB817B2A66CA6300B571A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0A95B3492A6859170072210B /* WeatherManager.swift */,
+				0A863EBF2A6AD270007189E2 /* WeatherData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFB81802A66CA6300B571A1 /* WeatherViewController.swift in Sources */,
+				0A863EC02A6AD270007189E2 /* WeatherData.swift in Sources */,
 				0AFB817C2A66CA6300B571A1 /* AppDelegate.swift in Sources */,
 				0A95B34A2A6859170072210B /* WeatherManager.swift in Sources */,
 				0AFB817E2A66CA6300B571A1 /* SceneDelegate.swift in Sources */,
