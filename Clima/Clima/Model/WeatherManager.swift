@@ -7,7 +7,6 @@
 
 import Foundation
 
-//Step 1
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
     func didFailWithError(error: Error)
@@ -15,8 +14,6 @@ protocol WeatherManagerDelegate {
 
 struct WeatherManager{
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=92e4f469e0ba491bfcbd666b670fdb07&units=metric"
-    
-    //STEP 2
     var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String){
@@ -32,7 +29,6 @@ struct WeatherManager{
                     self.delegate?.didFailWithError(error: error!)
                 }
                 if let safeData = data {
-                    //STEP 3
                     if let weather = self.parseJSON(safeData){
                         delegate?.didUpdateWeather(self, weather: weather)
                     }

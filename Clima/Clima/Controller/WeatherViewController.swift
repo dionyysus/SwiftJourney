@@ -51,7 +51,9 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     
     //STEP 5
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel){
-        print(weather.temperature)
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.tempatureString
+        }
     }
     
     func didFailWithError(error: Error) {
