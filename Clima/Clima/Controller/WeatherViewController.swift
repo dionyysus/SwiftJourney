@@ -24,6 +24,7 @@ class WeatherViewController: UIViewController {
 
 }
 
+//MARK: - UITextFieldDelegate
 extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
@@ -51,6 +52,7 @@ extension WeatherViewController: UITextFieldDelegate {
     }
 }
 
+//MARK: - WeatherManagerDelegate
 extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel){
         DispatchQueue.main.async {
