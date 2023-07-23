@@ -1,3 +1,4 @@
 #  hey
  
-<img src="/Users/gizemcoskun/Desktop/angela yu projects/Quizzler/Simulator Screenshot - iPhone 14 Pro - 2023-07-23 at 17.31.46.png" alt="Resim açıklaması" width="300">
+![image](https://github.com/dionyysus/SwiftJourney/assets/59100182/c41e0f4e-1207-45a7-b473-eaec591c539c)
+
