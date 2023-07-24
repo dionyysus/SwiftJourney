@@ -17,16 +17,22 @@
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/e10779bd-2122-4e56-9feb-eca795c3e3ee" width="200">
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/850239cf-96d5-4d52-94e0-2a1a971eb185" width="200">
 
-## Xylophone
 ## Quizzler
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/19f51de1-465a-4c6f-927d-2aec18152b72" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/4a5b9e61-9967-4147-85b9-0e8eb1d41960" width="200">
+
+## Xylophone
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/1a38b558-6d87-471a-8a1d-3af7267f8835" width="200">
+
 ## Tipsy
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/ffd46095-1835-4cb6-b3b6-d5d84c54107f" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/28e6417e-a94b-46f9-a848-4091ee78c1c2" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/dfc0b361-0c73-4891-b1f3-4d050ef75f6e" width="200">
 
 ## BMI Calculator
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/36013156-090e-4784-b411-82ae988be90b" width="200">
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/3f57a42f-0e49-440c-9d53-a508484e3239" width="200">
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/5b80fa4c-bb6f-4d51-a783-cf6dc827cea0" width="200">
-
-
 
 ## Clima
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/7972e7ff-df0c-436f-9216-29504d3a74a9" width="200">
