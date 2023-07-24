@@ -33,11 +33,15 @@ extension ViewController: UIPickerViewDataSource {
         coinManager.currencyArray.count
     }
     
-    
 }
 
 extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         coinManager.currencyArray[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedCurrency = coinManager.currencyArray[row]
+        print(coinManager.getCoinPrice(for: selectedCurrency))
     }
 }
