@@ -5,6 +5,7 @@
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/b1f85831-a01a-43a8-981d-f361467a4078" width="200">
 
 ## Dicee
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/97424e8a-a657-471b-9014-3785d927c3c8" width="200">
 ## Egg Timer
 ## Magic 8 Ball
 ## Xylophone
