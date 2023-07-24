@@ -14,14 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyPicker: UIPickerView!
     
     let coinManager = CoinManager()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
     }
-
-
 }
 
 extension ViewController: UIPickerViewDataSource {
@@ -42,6 +40,6 @@ extension ViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let selectedCurrency = coinManager.currencyArray[row]
-        print(coinManager.getCoinPrice(for: selectedCurrency))
+        coinManager.getCoinPrice(for: selectedCurrency)
     }
 }
