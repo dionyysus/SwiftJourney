@@ -31,6 +31,7 @@ class WeatherViewController: UIViewController {
     @IBAction func locationPressed(_ sender: UIButton) {
         locationManager.requestLocation()
     }
+    
 }
 
 //MARK: - UITextFieldDelegate
@@ -93,3 +94,5 @@ extension WeatherViewController: CLLocationManagerDelegate {
         print(error)
     }
 }
+
+
