@@ -14,6 +14,9 @@
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/ee00f6ed-7a19-4ed5-895c-43e576aeb477" width="200">
 
 ## Magic 8 Ball
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/e10779bd-2122-4e56-9feb-eca795c3e3ee" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/850239cf-96d5-4d52-94e0-2a1a971eb185" width="200">
+
 ## Xylophone
 ## Quizzler
 ## Tipsy
