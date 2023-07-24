@@ -10,6 +10,9 @@
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/c778b913-aee8-4605-bd82-c5d812f9c697" width="200">
 
 ## Egg Timer
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/541eaac2-cdac-4c44-b486-9b865f190904" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/ee00f6ed-7a19-4ed5-895c-43e576aeb477" width="200">
+
 ## Magic 8 Ball
 ## Xylophone
 ## Quizzler
