@@ -1,5 +1,8 @@
 # SwiftJourney
 ## Destini
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/d15ae9fe-1912-4636-93ed-a9c73206312e" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/b1f85831-a01a-43a8-981d-f361467a4078" width="200">
+
 ## Dicee
 ## Egg Timer
 ## Magic 8 Ball
