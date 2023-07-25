@@ -8,14 +8,10 @@
 import Foundation
 
 protocol CoinManagerDelegate {
-    
-    //Create the method stubs wihtout implementation in the protocol.
-    //It's usually a good idea to also pass along a reference to the current class.
-    //e.g. func didUpdatePrice(_ coinManager: CoinManager, price: String, currency: String)
-    //Check the Clima module for more info on this.
     func didUpdatePrice(price: String, currency: String)
     func didFailWithError(error: Error)
 }
+
 struct CoinManager {
     
     var delegate: CoinManagerDelegate?
@@ -36,13 +32,7 @@ struct CoinManager {
                 }
                 if let safeData = data {
                     if let bitcoinPrice = self.parseJSON(safeData) {
-                        
-                        //Optional: round the price down to 2 decimal places.
                         let priceString = String(format: "%.2f", bitcoinPrice)
-                        
-                        //Call the delegate method in the delegate (ViewController) and
-                        //pass along the necessary data.
-                        self.delegate?.didUpdatePrice(price: priceString, currency: currency)
                     }
                 }
             }

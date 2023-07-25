@@ -49,9 +49,6 @@ extension ViewController: UIPickerViewDelegate {
 
 extension ViewController: CoinManagerDelegate{
     func didUpdatePrice(price: String, currency: String) {
-            
-            //Remember that we need to get hold of the main thread to update the UI, otherwise our app will crash if we
-            //try to do this from a background thread (URLSession works in the background).
             DispatchQueue.main.async {
                 self.bitcoinLabel.text = price
                 self.currencyLabel.text = currency
