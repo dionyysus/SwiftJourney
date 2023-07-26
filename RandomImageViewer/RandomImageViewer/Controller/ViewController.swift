@@ -53,7 +53,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UISearchBarD
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         searchBar.frame = CGRect(x: 10, y: view.safeAreaInsets.top, width: view.frame.size.width - 20, height: 50)
-        collectionView?.frame = CGRect(x: 0, y: view.safeAreaInsets.top + 55, width: view.frame.size.width, height: view.frame.size.height - 55)
+        collectionView?.frame = CGRect(x: 0, y: view.safeAreaInsets.top+55, width: view.frame.size.width, height: view.frame.size.height-55)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
