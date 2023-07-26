@@ -40,7 +40,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         layout.minimumInteritemSpacing = 0
         layout.itemSize = CGSize(width: view.frame.size.width/2, height: view.frame.size.width/2)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         collectionView.dataSource = self
         view.addSubview(collectionView)
         self.collectionView = collectionView
@@ -80,8 +80,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .blue
+        let imageURLString = results[indexPath.row].urls.full
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: imageURLString)
         return cell
     }
     
