@@ -43,3 +43,8 @@
 ## ByteCoin 
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/e85b5978-4c78-45a8-881b-98acaa558052" width="200">
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/8ef11800-2a3c-4762-b522-94ead2d9bb82" width="200">
+
+## Random Image Viewer
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/b3f5ba4a-6ec6-45d8-bee1-147369ddf2b1" width="200">
+<img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/3a617885-1ae3-46c8-b923-2bb6420b0cc7" width="200">
+
