@@ -22,18 +22,21 @@ struct Result: Codable {
     let urls: URLS
 }
 struct URLS: Codable {
-    let full: String
+    let regular: String
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource {
-    let urlString = "https://api.unsplash.com/search/photos?page=1&query=office&client_id=tDvlFp4omTTGkdjhocTzHkmbYWJDeP7DrqUJXjBj_1I"
-
+class ViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
+   
     private var collectionView: UICollectionView?
     
     var results: [Result] = []
+    
+    let searchBar = UISearchBar()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+        view.addSubview(searchBar)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
@@ -43,16 +46,29 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
         collectionView.dataSource = self
         view.addSubview(collectionView)
+        collectionView.backgroundColor = .systemBackground
         self.collectionView = collectionView
-        fetchPhotos()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        collectionView?.frame = view.bounds
+        searchBar.frame = CGRect(x: 10, y: view.safeAreaInsets.top, width: view.frame.size.width - 20, height: 50)
+        collectionView?.frame = CGRect(x: 0, y: view.safeAreaInsets.top + 55, width: view.frame.size.width, height: view.frame.size.height - 55)
     }
     
-    func fetchPhotos(){
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        if let text = searchBar.text {
+            results = []
+            collectionView?.reloadData()
+            fetchPhotos(query: text)
+        }
+    }
+    
+    func fetchPhotos(query: String){
+        let urlString = "https://api.unsplash.com/search/photos?page=1&query=\(query)&client_id=tDvlFp4omTTGkdjhocTzHkmbYWJDeP7DrqUJXjBj_1I"
+
+
         guard let url = URL(string: urlString) else{
             return
         }
@@ -80,7 +96,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let imageURLString = results[indexPath.row].urls.full
+        let imageURLString = results[indexPath.row].urls.regular
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else {
             return UICollectionViewCell()
         }
