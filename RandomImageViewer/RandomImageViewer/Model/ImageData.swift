@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ImageData: Codable {
-    let id: String
-    let urls: ImageURLs
-}
-
-struct ImageURLs: Codable {
-    let regular: String
-}
+//struct ImageData: Codable {
+//    let id: String
+//    let urls: ImageURLs
+//}
+//
+//struct ImageURLs: Codable {
+//    let regular: String
+//}
