@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     
     @objc func addItemsBtn(){
         let alert = UIAlertController(title: "New Item", message: "Enter new item in todo list", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (_) in
+        }))
+        present(alert, animated: true)
     }
 }
 
