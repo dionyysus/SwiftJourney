@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     
     @objc func addItemsBtn(){
         let alert = UIAlertController(title: "New Item", message: "Enter new item in todo list", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Enter New Item"
+        }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Done", style: .default, handler: { (_) in
         }))
