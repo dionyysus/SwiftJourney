@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     private var collectionView: UICollectionView?
-    var results: [Result] = []
-    let searchBar = UISearchBar()
+    private let searchBar = UISearchBar()
+    private var results: [Result] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemBackground
-
         self.collectionView = collectionView
     }
 
@@ -46,8 +45,7 @@ class ViewController: UIViewController {
 
     func fetchPhotos(query: String){
            let urlString = "https://api.unsplash.com/search/photos?page=1&query=\(query)&client_id=tDvlFp4omTTGkdjhocTzHkmbYWJDeP7DrqUJXjBj_1I"
-
-
+        
            guard let url = URL(string: urlString) else{
                return
            }
@@ -61,7 +59,6 @@ class ViewController: UIViewController {
                        self?.results = jsonResult.results ?? []
                        self?.collectionView?.reloadData()
                    }
-
                }catch{
                    print(error)
                }
