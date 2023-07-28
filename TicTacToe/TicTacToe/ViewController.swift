@@ -32,6 +32,9 @@ class ViewController: UIViewController {
     var CROSS = "X"
     var board = [UIButton]()
     
+    var noughtsScore = 0
+    var crossessScore = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initBoard()
@@ -51,13 +54,63 @@ class ViewController: UIViewController {
     
     @IBAction func boardTapAction(_ sender: UIButton) {
         addToBoard(sender)
+        
+        if checkForVictory(CROSS){
+            crossessScore += 1
+            resultAlert(title: "Crosses Win!")
+        }
+        if checkForVictory(NOUGHT){
+            noughtsScore += 1
+            resultAlert(title: "Noughts Win!")
+        }
+        
         if (fullBoard()){
             resultAlert(title: "Draw")
         }
     }
+    func checkForVictory(_ s :String) -> Bool {
+        
+        
+        //horizantal victory
+        if thisSymbol(a1Button, s) && thisSymbol(a2Button, s) && thisSymbol(a3Button, s){
+            return true
+        }
+        if thisSymbol(b1Button, s) && thisSymbol(b3Button, s) && thisSymbol(b3Button, s){
+            return true
+        }
+        if thisSymbol(c1Button, s) && thisSymbol(c2Button, s) && thisSymbol(c3Button, s){
+            return true
+        }
+        
+        //vertical victory
+        if thisSymbol(a1Button, s) && thisSymbol(b1Button, s) && thisSymbol(c1Button, s){
+            return true
+        }
+        if thisSymbol(a2Button, s) && thisSymbol(b2Button, s) && thisSymbol(c2Button, s){
+            return true
+        }
+        if thisSymbol(a3Button, s) && thisSymbol(b3Button, s) && thisSymbol(c3Button, s){
+            return true
+        }
+        
+        //diagonal victory
+        if thisSymbol(a1Button, s) && thisSymbol(b2Button, s) && thisSymbol(c3Button, s){
+            return true
+        }
+        if thisSymbol(a3Button, s) && thisSymbol(b2Button, s) && thisSymbol(c1Button, s){
+            return true
+        }
+        
+        return false
+    }
     
+    func thisSymbol(_ button: UIButton, _ symbol: String) -> Bool {
+        return button.title(for: .normal) == symbol
+    }
     func resultAlert(title: String){
-        let ac = UIAlertController(title: title, message: nibName, preferredStyle: .actionSheet)
+        
+        let message = "\nNoughts" + String(noughtsScore) + "\nCrosses" + String(crossessScore)
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
             self.resetBoard()
         }))
@@ -65,6 +118,7 @@ class ViewController: UIViewController {
     }
     
     func resetBoard() {
+        
         for button in board {
             button.setTitle(nil, for: .normal)
             button.isEnabled = true
