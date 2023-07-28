@@ -30,13 +30,61 @@ class ViewController: UIViewController {
     
     var NOUGHT = "O"
     var CROSS = "X"
+    var board = [UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initBoard()
     }
 
+    func initBoard(){
+        board.append(a1Button)
+        board.append(a2Button)
+        board.append(a3Button)
+        board.append(b1Button)
+        board.append(b2Button)
+        board.append(b3Button)
+        board.append(c1Button)
+        board.append(c2Button)
+        board.append(c3Button)
+    }
+    
     @IBAction func boardTapAction(_ sender: UIButton) {
         addToBoard(sender)
+        if (fullBoard()){
+            resultAlert(title: "Draw")
+        }
+    }
+    
+    func resultAlert(title: String){
+        let ac = UIAlertController(title: title, message: nibName, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
+            self.resetBoard()
+        }))
+        self.present(ac, animated: true)
+    }
+    
+    func resetBoard() {
+        for button in board {
+            button.setTitle(nil, for: .normal)
+            button.isEnabled = true
+        }
+        if firstTurn == Turn.Nought {
+            firstTurn = Turn.Cross
+            turnLabel.text = CROSS
+        } else if firstTurn == Turn.Nought {
+            firstTurn = Turn.Nought
+            turnLabel.text = NOUGHT
+        }
+        currentTurn = firstTurn
+    }
+    func fullBoard() -> Bool {
+        for button in board {
+            if button.title(for: .normal) == nil {
+                return false
+            }
+        }
+        return true
     }
     
     func addToBoard(_ sender: UIButton){
@@ -50,6 +98,7 @@ class ViewController: UIViewController {
                 currentTurn = Turn.Nought
                 turnLabel.text = NOUGHT
             }
+            sender.isEnabled = false
         }
     }
 }
