@@ -52,4 +52,7 @@
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/58cb782f-6681-4d62-bdb8-9717fb2a0706" width="200">
 <img src="https://github.com/dionyysus/SwiftJourney/assets/59100182/350bc10c-60e4-4fca-b14d-504764f2d1b2" width="200">
 
+## Tic Tac Toe App 
+<img src="https://github.com/dionyysus/movieAppList/assets/59100182/9ae948a5-f10c-446b-a4e7-f38a54fb1784" width="200">
+<img src="https://github.com/dionyysus/movieAppList/assets/59100182/d7356ac2-6a2d-4c84-b4c5-0804871566ed" width="200">
 
