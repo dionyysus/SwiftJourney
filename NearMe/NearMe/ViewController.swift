@@ -8,14 +8,17 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    var locationManager: CLLocationManager?
+    
     lazy var mapView: MKMapView = {
         let map = MKMapView()
         //map.showsUserLocation = true
         map.translatesAutoresizingMaskIntoConstraints = false
         return map
     }()
+    
     lazy var searchTextField: UITextField = {
         let searchTextField = UITextField()
         searchTextField.layer.cornerRadius = 10
@@ -30,6 +33,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //initilize location manager
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+
         setupUI()
     }
     
