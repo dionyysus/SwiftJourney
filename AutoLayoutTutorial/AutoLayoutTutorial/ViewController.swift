@@ -27,7 +27,9 @@ class ViewController: UIViewController {
             button.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
             button.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             button.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            
         ])
+        
         
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
